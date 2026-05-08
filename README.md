@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# SmartLogix - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Componente frontend de SmartLogix desarrollado con React. Proporciona la
+interfaz de usuario para la gestión de pedidos e inventario, comunicándose
+con el Backend For Frontend (BFF).
 
-## Available Scripts
+## Tecnologías
+- React 18
+- JavaScript
+- React Router DOM
+- Axios
+- NPM
 
-In the project directory, you can run:
+## Patrones de Diseño Implementados
+- **Observer Pattern**: Manejo de estado con useState y useEffect
+- **Component Pattern**: Componentes reutilizables y modulares
+- **Service Layer**: Separación de lógica de comunicación con la API
 
-### `npm start`
+## Estructura del Proyecto
+src/
+├── componentes/
+│   ├── ListaPedidos.js
+│   ├── ListaProductos.js
+│   └── FormularioPedido.js
+├── services/
+│   └── api.js
+├── pages/
+├── context/
+├── App.js
+└── index.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requisitos
+- Node.js 18+
+- NPM 9+
+- BFF corriendo en puerto 8080
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación y Ejecución
+```bash
+# Clonar el repositorio
+git clone https://github.com/GenesisEroj/smartlogix-frontend
 
-### `npm test`
+# Entrar al directorio
+cd smartlogix-frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Instalar dependencias
+npm install
 
-### `npm run build`
+# Ejecutar en modo desarrollo
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Scripts disponibles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Script | Descripción |
+|--------|-------------|
+| npm start | Inicia el servidor de desarrollo |
+| npm run build | Genera build de producción |
+| npm test | Ejecuta las pruebas |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Vistas disponibles
 
-### `npm run eject`
+| Ruta | Componente | Descripción |
+|------|-----------|-------------|
+| / | ListaPedidos | Lista de todos los pedidos |
+| /productos | ListaProductos | Inventario de productos |
+| /nuevo-pedido | FormularioPedido | Crear nuevo pedido |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Equipo
+- Genesis Eroj
+- Francisco Monsalve
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**DSY1106 - Desarrollo Fullstack III**
