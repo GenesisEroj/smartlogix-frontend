@@ -34,7 +34,8 @@ export const PedidosModule = () => {
       await crearPedido({
         clienteId: form.clienteNombre,
         productoId: form.productoId,
-        cantidad: parseInt(form.cantidad)
+        cantidad: parseInt(form.cantidad),
+        total: parseFloat(form.total || 0)
       })
       setForm(EMPTY_FORM); setShowForm(false)
     } catch (_) { }

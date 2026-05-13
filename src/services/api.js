@@ -46,7 +46,7 @@ export const pedidosServiceFactory = () => {
     getPedidos: () => client.get(''),
     getPedidoById: (id) => client.get(`/${id}`),
     createPedido: (data) => client.post('', data),
-    updateEstado: (id, estado) => client.patch(`/${id}/estado`, { estado }),
+    updateEstado: (id, estado) => client.put(`/${id}/estado`, { estado }),
     deletePedido: (id) => client.delete(`/${id}`),
     getPedidosByEstado: (estado) => client.get(`?estado=${estado}`)
   }
