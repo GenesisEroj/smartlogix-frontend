@@ -31,11 +31,14 @@ export const PedidosModule = () => {
   const handleSubmit = async () => {
     if (!form.clienteNombre || !form.productoId || !form.cantidad) return
     try {
-      await crearPedido({ ...form, cantidad: parseInt(form.cantidad), total: parseFloat(form.total || 0), estado: 'PENDIENTE' })
+      await crearPedido({
+        clienteId: form.clienteNombre,
+        productoId: form.productoId,
+        cantidad: parseInt(form.cantidad)
+      })
       setForm(EMPTY_FORM); setShowForm(false)
-    } catch (_) {}
+    } catch (_) { }
   }
-
   const filtered = pedidos.filter(p => filtroEstado === 'TODOS' || p.estado === filtroEstado)
 
   const inputStyle = {
@@ -141,7 +144,7 @@ export const PedidosModule = () => {
             <tbody>
               {filtered.length === 0 ? (
                 <tr><td colSpan={7} style={{ padding: '3rem', textAlign: 'center', color: '#334155' }}>
-                  No hay pedidos{filtroEstado !== 'TODOS' ? ` con estado ${filtroEstado}` : ''}. 
+                  No hay pedidos{filtroEstado !== 'TODOS' ? ` con estado ${filtroEstado}` : ''}.
                 </td></tr>
               ) : filtered.map((p, i) => {
                 const ec = estadoColor[p.estado] || estadoColor.PENDIENTE

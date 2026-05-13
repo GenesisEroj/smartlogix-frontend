@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = import.meta.env.VITE_BFF_URL || 'http://localhost:8083'
+const BASE_URL = import.meta.env.VITE_BFF_URL || 'http://localhost:8084'
 
 const createApiClient = (baseURL) => {
   const client = axios.create({
