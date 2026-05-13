@@ -176,7 +176,7 @@ smartlogix-frontend/
 
 ## Estrategia de Branching
 
-Este proyecto utiliza **Git Flow**:
+Este proyecto utiliza **GitHub Flow**:
 
 ```
 main        → rama principal (producción)
