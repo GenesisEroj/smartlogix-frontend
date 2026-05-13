@@ -1,0 +1,11 @@
+// Punto de entrada del módulo NPM smartlogix-frontend
+export { default as App } from '../App.jsx'
+export { Sidebar } from '../components/Dashboard/Sidebar'
+export { DashboardHome } from '../components/Dashboard/DashboardHome'
+export { NotificationToast } from '../components/Dashboard/NotificationToast'
+export { InventarioModule } from '../components/Inventario/InventarioModule'
+export { PedidosModule } from '../components/Pedidos/PedidosModule'
+export { useInventario } from '../hooks/useInventario'
+export { usePedidos } from '../hooks/usePedidos'
+export { useNotifications } from '../hooks/useNotifications'
+export { inventarioServiceFactory, pedidosServiceFactory } from '../services/api'
